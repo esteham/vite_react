@@ -12,6 +12,7 @@ import StateInDe from "./pages/state/stateInDe";
 import RoleBaseRander from "./pages/ifelse/ifElseRoleBaseRander";
 import SwitchRoleBaseRander from "./pages/switchCase/switchRoleBaseRander";
 import ListRendering from "./pages/state/listRandering";
+import LifeCycleWithModal from "./pages/state/lifeCycleWithModal"
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -52,6 +53,7 @@ function App() {
               element={<SwitchRoleBaseRander />}
             />
             <Route path="/listRandering" element={<ListRendering />} />
+            <Route path="/lifeCycleWithModal" element={<LifeCycleWithModal />}/>
           </Routes>
         </main>
       </div>

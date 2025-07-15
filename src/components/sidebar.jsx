@@ -51,6 +51,7 @@ const Sidebar = ({ isOpen }) => {
             <Link to="/stateNameInput" className="block mb-1 hover:text-blue-600">Name Input</Link>
             <Link to="/stateInDe" className="block mb-1 hover:text-blue-600">Increment/Decrement</Link>
             <Link to="/listRandering" className="block mb-1 hover:text-blue-600">List</Link>
+            <Link to="/lifeCycleWithModal" className="block mb-1 hover:text-blue-600">Life Cycle</Link>
           </div>
         )}
       </div>
