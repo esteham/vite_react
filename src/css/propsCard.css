@@ -1,0 +1,10 @@
+/*propsCard.css*/
+
+.propsCard
+{
+    padding: 10px;
+}
+.card{
+    border: 1px solid black;
+    text-align: left;
+}
