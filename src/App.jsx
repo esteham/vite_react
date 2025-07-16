@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css"; 
+import "./index.css"; 
 import Sidebar from "./components/sidebar";
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -28,7 +30,7 @@ function App() {
         {/* Toggle Button */}
         <button
           onClick={toggleSidebar}
-          className="fixed top-4 left-4 z-50 bg-blue-600 text-white px-3 py-2 rounded shadow-md"
+          className="fixed top-4 left-4 z-50 bg-dark text-white px-2 py-1 rounded shadow-md"
         >
           {isSidebarOpen ? "Hide Sidebar" : "Show Sidebar"}
         </button>
