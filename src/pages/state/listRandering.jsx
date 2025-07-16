@@ -1,50 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ListRendering = () => {
-    const [tasks, setTasks] = useState([
-        { id: 1, title: "Learn React" },
-        { id: 2, title: "Build Project" },
-    ]);
+    const [tasks, setTasks] = useState(() => {
+        // 🔹 Get saved tasks from localStorage on first load
+        const savedTasks = localStorage.getItem("tasks");
+        return savedTasks ? JSON.parse(savedTasks) : [];
+    });
 
-    const [newTaskTitle, setNewTaskTitle] = useState(""); // 🔸 State to hold input value
+    const [newTaskTitle, setNewTaskTitle] = useState("");
 
-    // 🔹 Called when typing in the input
+    // 🔸 Save tasks to localStorage whenever tasks change
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
+
     const handleInputChange = (e) => {
-        setNewTaskTitle(e.target.value); // 🔸 Set input field value to state
+        setNewTaskTitle(e.target.value);
     };
 
-    // 🔹 To add a new task
     const addTask = () => {
-        if (newTaskTitle.trim() === "") return; // Do nothing if input is empty
+        if (newTaskTitle.trim() === "") return;
 
         const newTask = {
             id: Date.now(),
             title: newTaskTitle,
         };
 
-        setTasks([...tasks, newTask]); // 🔸 Add new task to existing ones
-        setNewTaskTitle(""); // 🔸 Clear the input field
+        setTasks([...tasks, newTask]);
+        setNewTaskTitle("");
     };
 
-    // 🔹 To remove a task
     const removeTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id));
     };
 
     return (
         <div>
-            {/* 🔸 Input field */}
+            <h2>Todo List</h2>
+
             <input
                 type="text"
                 placeholder="Enter task"
                 value={newTaskTitle}
                 onChange={handleInputChange}
             />
-
-            {/* 🔸 Add task button */}
             <button onClick={addTask}>Add Task</button>
 
-            {/* 🔸 Show task list */}
             <ul>
                 {tasks.map((task) => (
                     <li key={task.id}>
