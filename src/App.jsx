@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css"; 
+import "./index.css"; 
 import Sidebar from "./components/sidebar";
 import Home from "./pages/home";
 import About from "./pages/about";
