@@ -13,11 +13,11 @@ const Home = () => {
           Welcome to the Home Page!
         </p>
         
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+        <div className="flex flex-wrap justify-center gap-4 p-3">
+          <button className="px-6 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
             Get Started
           </button>
-          <button className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors duration-300">
+          <button className="px-6 py-2 border border-indigo-600 text-indigo-500 rounded-lg hover:bg-indigo-50 transition-colors duration-300">
             Learn More
           </button>
         </div>
