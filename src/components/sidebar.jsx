@@ -17,16 +17,6 @@ const Sidebar = ({ isOpen }) => {
       className={`w-[220px] h-screen fixed top-0 left-0 bg-dark text-white p-5 overflow-y-auto z-40 transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
     >
-      <Link to="/" className="block mb-2 hover:text-blue-600">
-        Home
-      </Link>
-      <Link to="/about" className="block mb-2 hover:text-blue-600">
-        About
-      </Link>
-      <Link to="/component" className="block mb-4 hover:text-blue-600">
-        Component
-      </Link>
-
       {/* Props Menu */}
       <div>
         <div

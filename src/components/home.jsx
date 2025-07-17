@@ -1,5 +1,5 @@
-// src/pages/Home.jsx
-import React from 'react';
+// src/components/home.jsx
+import React from "react";
 
 const Home = () => {
   return (
@@ -8,11 +8,11 @@ const Home = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
           Home Page
         </h1>
-        
+
         <p className="text-lg md:text-xl text-gray-600 mb-8">
           Welcome to the Home Page!
         </p>
-        
+
         <div className="flex flex-wrap justify-center gap-4 p-3">
           <button className="px-6 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
             Get Started
