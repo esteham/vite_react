@@ -1,80 +1,37 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Form, Button, Card } from "react-bootstrap";
 
-function Register() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // In a real app, you would handle registration here
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords don't match!");
-      return;
-    }
-    console.log('Registration submitted:', formData);
-    alert('Registration functionality would go here');
-  };
-
+const Register = () => {
   return (
-    <div className="register-form">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit" className="submit-btn">Register</button>
-      </form>
-    </div>
+    <Card className="p-4 mx-auto" style={{ maxWidth: "400px" }}>
+      <h3 className="text-center mb-3">Register Here</h3>
+      <Form>
+        <Form.Group controlId="loginEmail">
+          <Form.Label>First Name</Form.Label>
+          <Form.Control type="email" placeholder="Enter Email Address" />
+        </Form.Group>
+
+        <Form.Group controlId="loginEmail">
+          <Form.Label>Last Name</Form.Label>
+          <Form.Control type="email" placeholder="Enter Email Address" />
+        </Form.Group>
+
+        <Form.Group controlId="loginEmail">
+          <Form.Label>Email Address</Form.Label>
+          <Form.Control type="email" placeholder="Enter Email Address" />
+        </Form.Group>
+
+        <Form.Group controlId="loginPassword" className="mt-3">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Enter Password" />
+        </Form.Group>
+
+        <Button variant="primary" type="submit" className="mt-4 w-100">
+          Register
+        </Button>
+      </Form>
+    </Card>
   );
-}
+};
 
 export default Register;

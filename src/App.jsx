@@ -5,6 +5,8 @@ import "./App.css";
 import "./index.css";
 import Sidebar from "./components/sidebar";
 import HeaderNav from "./components/headerNav";
+// import TopCarouselFade from "./components/topCarousel";
+import Footer from "./components/footer";
 import Home from "./components/home";
 import About from "./components/about";
 import Login from "./components/login";
@@ -45,6 +47,7 @@ function App() {
           style={{ marginLeft: isSidebarOpen ? "220px" : "0px" }}
         >
           <HeaderNav />
+          {/* <TopCarouselFade /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -67,6 +70,7 @@ function App() {
               element={<LifeCycleWithModal />}
             />
           </Routes>
+          <Footer />
         </main>
       </div>
     </BrowserRouter>

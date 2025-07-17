@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
-import React from 'react';
-import './../css/footer.css';
+import React from "react";
+import "./../css/footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,12 +18,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul className="footer-links">
-            {['Home', 'About', 'Services', 'Contact'].map((item) => (
+            {["Home", "About", "Services", "Contact"].map((item) => (
               <li key={item}>
-                <a 
-                  href={`/${item.toLowerCase()}`} 
-                  className="footer-link"
-                >
+                <a href={`/${item.toLowerCase()}`} className="footer-link">
                   {item}
                 </a>
               </li>
@@ -34,15 +31,13 @@ const Footer = () => {
         {/* Newsletter */}
         <div className="footer-section">
           <h3>Newsletter</h3>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: "flex" }}>
             <input
               type="email"
               placeholder="Your email"
               className="newsletter-input"
             />
-            <button className="newsletter-button">
-              Subscribe
-            </button>
+            <button className="newsletter-button">Subscribe</button>
           </div>
         </div>
       </div>
