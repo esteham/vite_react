@@ -1,5 +1,37 @@
 // src/components/home.jsx
 import React from "react";
+import Carousel from 'react-bootstrap/Carousel';
+import ExampleCarouselImage from './exampleCarouselImage';
+
+function CarouselFadeExample() {
+  return (
+    <Carousel fade>
+      <Carousel.Item>
+        <ExampleCarouselImage text="First slide" />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <ExampleCarouselImage text="Second slide" />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <ExampleCarouselImage text="Third slide" />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
+}
 
 const Home = () => {
   return (
@@ -13,8 +45,10 @@ const Home = () => {
           Welcome to the Home Page!
         </p>
 
+        <CarouselFadeExample />
+
         <div className="flex flex-wrap justify-center gap-4 p-3">
-          <button className="px-6 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+          <button className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300">
             Get Started
           </button>
           <button className="px-6 py-2 border border-indigo-600 text-indigo-500 rounded-lg hover:bg-indigo-50 transition-colors duration-300">
