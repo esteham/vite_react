@@ -14,7 +14,7 @@ const Sidebar = ({ isOpen }) => {
 
   return (
     <nav
-      className={`w-[220px] h-screen fixed top-0 left-0 bg-dark text-white p-5 overflow-y-auto z-40 transition-transform duration-300
+      className={`w-[220px] h-screen fixed top-10 left-0 bg-dark text-white p-5 overflow-y-auto z-40 transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
     >
       {/* Props Menu */}

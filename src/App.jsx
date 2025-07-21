@@ -5,7 +5,6 @@ import "./App.css";
 import "./index.css";
 import Sidebar from "./components/sidebar";
 import HeaderNav from "./components/headerNav";
-// import TopCarouselFade from "./components/exampleCarouselImage";
 import Footer from "./components/footer";
 import Home from "./components/home";
 import About from "./components/about";
@@ -38,16 +37,15 @@ function App() {
           onClick={toggleSidebar}
           className="fixed top-4 left-4 z-50 bg-warning mt-2 text-white px-2 py-1 rounded shadow-md"
         >
-          {isSidebarOpen ? "Hide Sidebar" : "☰"}
+          {isSidebarOpen ? ">" : "☰"}
         </button>
 
         {/* Main content */}
         <main
-          className={`flex-grow py-8 transition-all duration-300`}
+          className={`flex-grow py-8 transition-all duration-300 top-10`}
           style={{ marginLeft: isSidebarOpen ? "220px" : "0px" }}
         >
           <HeaderNav />
-          {/* <ExampleCarouselImage /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
